@@ -1,5 +1,13 @@
 # Cassandra with Python (and Flask) in docker-composer:
 
+## Components:
+
+### Init scripts:
+* Creates and populates tables
+
+### Proj-smited:
+* React front end of the application
+
 ## Steps:
 
 * ```docker-composer build```
@@ -12,5 +20,6 @@
 ## Clean:
 * ```docker-compose rm -f```
     * Call this before to clear containers    
+
 
 
