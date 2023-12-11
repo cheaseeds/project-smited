@@ -1,4 +1,4 @@
-# Cassandra with Python (and Flask) in docker-composer:
+# Cassandra with Python, Flask, and React in docker-composer:
 
 ## Components:
 
