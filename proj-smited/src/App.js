@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import DoctorSubmit from './DoctorSubmit';
 
 function App() {
+
+//Initialize variables
   const [formData, setFormData] = useState({
     disease: '',
     fever: false,
@@ -54,6 +56,7 @@ const HomePage = ({ formData, handleCheckboxChange, handleSubmit, setFormData}) 
   const [entryCount, setEntryCount] = useState(0);
   const [responseData, setResponseData] = useState(null);
 
+//Submits request to localhost:5555
   const fetchData = async () => {
     try {
       console.log('Selected conditions:', formData);
@@ -78,7 +81,7 @@ const HomePage = ({ formData, handleCheckboxChange, handleSubmit, setFormData}) 
       console.error('Error fetching data:', error);
     }
   };
-  
+//Handles check box changes 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
@@ -87,6 +90,8 @@ const HomePage = ({ formData, handleCheckboxChange, handleSubmit, setFormData}) 
     }));
   };
 
+
+//This is a form section
   return (
     <div className="App">
       <header className="App-header">
